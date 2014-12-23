@@ -59,7 +59,7 @@ __FBSDID("$FreeBSD: releng/10.1/sys/dev/hyperv/utilities/hv_kvp.c 272322 2014-09
 #include <net/if_arp.h>
 
 #include <hyperv.h>
-#include <dev/hyperv/netvsc/hv_net_vsc.h>
+#include <hv_net_vsc.h>
 
 #include "unicode.h"
 #include "hv_kvp.h"
