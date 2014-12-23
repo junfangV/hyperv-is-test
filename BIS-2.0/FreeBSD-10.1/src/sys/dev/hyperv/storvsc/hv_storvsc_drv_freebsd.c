@@ -824,7 +824,6 @@ storvsc_attach(device_t dev)
 
 	/* create sg-list page pool */
 	if (FALSE == g_hv_sgl_page_pool.is_init){
-        printf("Just for debug: stor_test start init sg-pool\n");
 		g_hv_sgl_page_pool.is_init = TRUE;
 		LIST_INIT(&g_hv_sgl_page_pool.in_use_sgl_list);
 		LIST_INIT(&g_hv_sgl_page_pool.free_sgl_list);

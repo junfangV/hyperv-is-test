@@ -71,17 +71,17 @@ __FBSDID("$FreeBSD: releng/10.1/sys/dev/hyperv/utilities/hv_kvp.c 272322 2014-09
 #define kvp_hdr		hdr.kvp_hdr
 
 /* hv_kvp debug control */
-static int hv_kvp_log = 0;
-SYSCTL_INT(_dev, OID_AUTO, hv_kvp_log, CTLFLAG_RW, &hv_kvp_log, 0,
+static int hv_kvp_port_log = 0;
+SYSCTL_INT(_dev, OID_AUTO, hv_kvp_port_log, CTLFLAG_RW, &hv_kvp_port_log, 0,
 	"hv_kvp log");
 
 #define	hv_kvp_log_error(...)	do {				\
-	if (hv_kvp_log > 0)				\
+	if (hv_kvp_port_log > 0)				\
 		log(LOG_ERR, "hv_kvp: " __VA_ARGS__);	\
 } while (0)
 
 #define	hv_kvp_log_info(...) do {				\
-	if (hv_kvp_log > 1)				\
+	if (hv_kvp_port_log > 1)				\
 		log(LOG_INFO, "hv_kvp: " __VA_ARGS__);		\
 } while (0)
 
